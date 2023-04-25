@@ -32,26 +32,32 @@ Future<void> main() async {
     default: lang = AR();
   }
 
-  if (token != null) {
-    PageActuel = Login();
-  } else {
-    PageActuel = const WaitActivation();
+Widget PageActuel;
+  if(onBoarding_is_Seen)
+    // ignore: curly_braces_in_flow_control_structures
+    if (token == null) {
+      PageActuel = Home(childIndex: 'login');
+    } else {
+      PageActuel = Home(childIndex: 'ListColis',);
+    }
+  else {
+    PageActuel = on_boardingPage();
   }
 
 
   runApp( MyApp(
     theme_is_dark: dark,
-    skip: onBoarding_is_Seen,
+    firstPage: PageActuel,
   ));
 }
 
 class MyApp extends StatelessWidget {
   
   late bool theme_is_dark;
-  late bool skip;
+  late Widget firstPage;
   MyApp({
     required this.theme_is_dark,
-    required this.skip,
+    required this.firstPage,
   });
 
   @override
@@ -71,7 +77,7 @@ class MyApp extends StatelessWidget {
             darkTheme: darkTheme,
             theme: lightTheme,
             themeMode: theme,
-            home: skip ? Home() : on_boardingPage(),
+            home: firstPage,
           );
         },
       ),

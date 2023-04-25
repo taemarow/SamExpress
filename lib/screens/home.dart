@@ -2,25 +2,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sam_express/const/const.dart';
-import 'package:sam_express/screens/login.dart';
-
+import 'package:sam_express/screens/wait_activation.dart';
 import '../logic/cubit/states.dart';
 import '../logic/cubit/appbar_cubit.dart';
 import '../shared/chache.dart';
 import '../style/mycolors.dart';
-import 'wait_activation.dart';
+import 'colis/coli_info.dart';
+import 'colis/list_colis.dart';
+import 'login.dart';
+import 'register.dart';
 
 class Home extends StatelessWidget {
-  Home({super.key});
+  Home({super.key, required this.childIndex});
   late appBarCubit cubit;
+  late String childIndex;
 
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<appBarCubit, States>(
       listener: (context, state) {},
       builder: (context, state) {
+        Map<String, Widget> widgets = {
+          'login': Login(), 
+          'register': Register(), 
+          'WaitActivation': const WaitActivation(),
+          'ListColis' : ListColis(),
+          'ColiInfo' : ColiInfo(),
+        };
         cubit = appBarCubit.get(context);
         return Scaffold(
+          floatingActionButton:  childIndex == 'ListColis'? 
+            FloatingActionButton(
+              onPressed: (){},
+              child: Icon(Icons.add, color: MyColors.lightTheme,),
+              //backgroundColor: MyColors.mainColor,
+            )
+            : null,
           appBar: AppBar(
                 //elevation: elevation?? 0,
                 //leading: 
@@ -44,7 +61,7 @@ class Home extends StatelessWidget {
               ),
           body: Padding(
             padding: const EdgeInsets.all(20),
-            child: PageActuel,
+            child: widgets[childIndex],
           ),
           bottomSheet: Center(
             heightFactor: 2,

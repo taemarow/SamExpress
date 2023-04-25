@@ -1,12 +1,13 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sam_express/logic/methods.dart';
+import 'package:sam_express/screens/home.dart';
 import 'package:sam_express/shared/componenets.dart';
 import 'package:sam_express/style/mycolors.dart';
 import '../const/const.dart';
 import '../logic/cubit/pass_cubit.dart';
 import '../logic/cubit/states.dart';
+import 'colis/list_colis.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -56,6 +57,7 @@ class Login extends StatelessWidget {
                 hint: lang.user_label,
                 sufix_icon: Icons.email,
                 validator_text: lang.txtfield_validation_text,
+                keyboardType: TextInputType.emailAddress
               ),
               Row(
                 children: [
@@ -129,7 +131,7 @@ class Login extends StatelessWidget {
                                 icon: Icons.send,
                                 function: (){
                                   if(form2Key.currentState!.validate()){
-
+                                    
                                   }
                                 }
                               ),
@@ -148,15 +150,21 @@ class Login extends StatelessWidget {
               IconTextButton(
                 function: (){
                   if(formKey.currentState!.validate()){
-                    /****** */
+                    go_no_back(context: context, widget: Home(childIndex: 'ListColis'));
                   }
                 },
                 icon: Icons.login,
-                iconColor: MyColors.bgColor,
-                bgColor: MyColors.mainColor,
                 text: lang.login,
               ),
-              horizon_big_spacing,
+              myTextButton(
+                function: (){
+                  go_no_back(context: context, widget: Home(childIndex: 'register'));
+                }, 
+                text: lang.register,
+                color: MyColors.red
+              ),
+
+              horizon_spacing,
             ],
           ),
         )

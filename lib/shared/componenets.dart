@@ -8,7 +8,6 @@ Widget my_textField({
   required var controller,
   String label = '',
   String hint = '',
-  IconData? prefix_icon,
   IconData? sufix_icon,
   Function()? sufix_fuction,
   Function()? onTap,
@@ -17,8 +16,9 @@ Widget my_textField({
   bool invisible = false,
   String validator_text = '',
   TextInputType keyboardType = TextInputType.multiline,
-}) =>
-    TextFormField(
+}) => SizedBox(
+  height: 50,
+  child: TextFormField(
       keyboardType: keyboardType,
       onTap: onTap ?? () {},
       obscureText: invisible,
@@ -32,7 +32,6 @@ Widget my_textField({
       decoration: InputDecoration(
         label: Text(label),
         hintText: hint,
-        prefixIcon: Icon(prefix_icon, color: icon_color,),
         suffixIcon: IconButton(
           onPressed: sufix_fuction ?? () {},
           icon: Icon(sufix_icon, color: icon_color,),
@@ -50,7 +49,9 @@ Widget my_textField({
           ),
         ),
       ),
-    );
+    ),
+);
+    
 
 Widget myButton({
   required Function() function,
@@ -79,19 +80,19 @@ FloatingActionButton IconTextButton({
   required Function() function,
   required String text,
   required IconData icon,
-  Color iconColor = Colors.grey,
-  Color bgColor = Colors.blue,
+  Color? iconColor ,
+  Color? bgColor ,
 })=>FloatingActionButton.extended(
   label: Text(
     text, 
     style: TextStyle(
       fontWeight: FontWeight.bold,
-      color: iconColor,
+      color: iconColor?? MyColors.bgColor,
       fontSize: 16,
     ),
   ), 
-  backgroundColor: bgColor,
-  icon: Icon( icon, size: 24.0, color: iconColor,),
+  backgroundColor: bgColor?? MyColors.mainColor,
+  icon: Icon( icon, size: 24.0, color: iconColor?? MyColors.bgColor,),
   onPressed: function,
 );
 
@@ -107,7 +108,7 @@ TextButton myTextButton({
         style: TextStyle(
           fontWeight: FontWeight.bold,
           color: color?? MyColors.bgColor,
-          fontSize: 16
+          fontSize: 15
         ),
       ),
     );

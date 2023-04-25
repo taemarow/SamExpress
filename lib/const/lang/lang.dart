@@ -1,19 +1,36 @@
 
 class Lang {
-
-   String sam_express_rights = '';
+   
+   /*******  Login    */
    String login_label = '';
    String login = '';
    String user_label = '';
    String pass_label = '';
    String forgot_pass = '';
-   String appBar_title = 'Sam Express';
+
+  /*********  forgot pass  */
    String txtfield_validation_text = '';
    String sendPAss = '';
    String enterEmail = '';
-   String skip = '';
+
+   /*******  Register  */
+   String register_label = '';
+   String register = '';
+   String adress_label = '';
+   String phone_label = '';
+   String name_label = '';
+
+   /********* Others  */
+   String sam_express_rights = '';
+   String appBar_title = '';
+   String confirm = '';
+   String search = '';
+   
    String wait_activation = '';
    String back = '';
+
+   /******** On Boarding  */
+   String skip = '';
    String boardingTitle_1 = '';
    String boardingTitle_2 = '';
    String boardingTitle_3 = '';

@@ -5,9 +5,6 @@ import 'lang/lang.dart';
 /*******  language  *******/
 late Lang lang ;
 
-/************ pagination ************ */
-late Widget PageActuel ; 
-
 /************ phone dimentions ************/
 double phoneWhidth(BuildContext context) {
   return MediaQuery.of(context).size.width;

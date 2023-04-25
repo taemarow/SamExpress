@@ -5,15 +5,18 @@ import 'package:sam_express/style/mycolors.dart';
 import '../const/const.dart';
 import '../logic/cubit/pass_cubit.dart';
 import '../logic/cubit/states.dart';
-/*
+import '../logic/methods.dart';
+import 'home.dart';
+
 class Register extends StatelessWidget {
   Register({super.key});
 
   var PassController = TextEditingController();
-  var UserController = TextEditingController();
+  var PhoneController = TextEditingController();
+  var AdressController = TextEditingController();
   var mailController = TextEditingController();
+  var nameController = TextEditingController();
   var formKey = GlobalKey<FormState>();
-  var form2Key = GlobalKey<FormState>();
   
 
   @override
@@ -39,26 +42,74 @@ class Register extends StatelessWidget {
               horizon_spacing,
 
               Text(
-                lang.Register,
+                lang.register,
                 style: Theme.of(context).textTheme.headline1,
               ),
               Text(
-                lang.Register_label,
+                lang.register_label,
                 style: Theme.of(context).textTheme.headline2,
               ),
 
               horizon_big_spacing,
 
               my_textField(
-                controller: UserController,
+                controller: mailController,
                 hint: lang.user_label,
                 sufix_icon: Icons.email,
                 validator_text: lang.txtfield_validation_text,
+                keyboardType: TextInputType.emailAddress
               ),
               Row(
                 children: [
                   Text(
                     lang.user_label,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ]),
+
+              horizon_big_spacing,
+
+              my_textField(
+                controller: nameController,
+                hint: lang.name_label,
+                sufix_icon: Icons.person,
+                validator_text: lang.txtfield_validation_text,
+              ),
+              Row(
+                children: [
+                  Text(
+                    lang.name_label,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ]),
+
+              horizon_big_spacing,
+              my_textField(
+                controller: PhoneController,
+                hint: lang.phone_label,
+                sufix_icon: Icons.phone,
+                validator_text: lang.txtfield_validation_text,
+                keyboardType: TextInputType.phone
+              ),
+              Row(
+                children: [
+                  Text(
+                    lang.phone_label,
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ]),
+              horizon_big_spacing,
+
+              my_textField(
+                controller: AdressController,
+                hint: lang.adress_label,
+                sufix_icon: Icons.home,
+                validator_text: lang.txtfield_validation_text,
+              ),
+              Row(
+                children: [
+                  Text(
+                    lang.adress_label,
                     style: Theme.of(context).textTheme.bodyText2,
                   ),
                 ]),
@@ -95,65 +146,29 @@ class Register extends StatelessWidget {
               ]),
 
               horizon_spacing,
-          
-              Row(
-                children: [
-                  myTextButton(
-                    function: (){
-                      myNotification(
-                        context: context,
-                        title: lang.forgot_pass,
-                        content: Form(
-                          key: form2Key,
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                lang.enterEmail,
-                                style: Theme.of(context).textTheme.headline2,
-                              ),
-                              horizon_big_spacing,
-                              my_textField(
-                                controller: mailController,
-                                label: lang.user_label,
-                                validator_text: lang.txtfield_validation_text,
-                              ),
-                              horizon_big_spacing,
-                              IconTextButton(
-                                text: lang.sendPAss, 
-                                bgColor: MyColors.mainColor,
-                                iconColor: MyColors.bgColor,
-                                icon: Icons.send,
-                                function: (){
-                                  if(form2Key.currentState!.validate()){
-
-                                  }
-                                }
-                              ),
-                            ],
-                          ),
-                        )
-                      );
-                    }, 
-                    text: lang.forgot_pass,
-                  ),
-                ],
-              ),
               
               horizon_big_spacing,
 
               IconTextButton(
                 function: (){
                   if(formKey.currentState!.validate()){
-                    /****** */
+                    go_no_back(context: context, widget: Home(childIndex: 'WaitActivation'));
                   }
                 },
-                icon: Icons.Register,
+                icon: Icons.person_add,
                 iconColor: MyColors.bgColor,
                 bgColor: MyColors.mainColor,
-                text: lang.Register,
+                text: lang.register,
               ),
+
+              myTextButton(
+                function: (){
+                  go_no_back(context: context, widget: Home(childIndex: 'login'));
+                }, 
+                text: lang.login,
+                color: MyColors.red
+              ),
+
               horizon_big_spacing,
             ],
           ),
@@ -161,4 +176,4 @@ class Register extends StatelessWidget {
       ),
     );
   }
-}*/
+}

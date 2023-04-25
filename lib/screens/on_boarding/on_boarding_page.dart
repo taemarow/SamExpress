@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sam_express/screens/home.dart';
+import 'package:sam_express/screens/login.dart';
 import 'package:sam_express/style/mycolors.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -9,7 +10,7 @@ import '../../logic/cubit/boarding_cubit.dart';
 import '../../logic/cubit/states.dart';
 import '../../shared/chache.dart';
 import '../../shared/componenets.dart';
-import '../../shared/methods.dart';
+import '../../logic/methods.dart';
 import 'on_boarding_template.dart';
 
 class on_boardingPage extends StatelessWidget {
@@ -38,7 +39,7 @@ class on_boardingPage extends StatelessWidget {
                 myTextButton(
                   function: () {
                     go_no_back(
-                      widget: Home(),
+                      widget: Home(childIndex: 'login'),
                       context: context,
                     );
                     Cache.saveBool(key: 'skip_onBoarding', value: true);
@@ -86,7 +87,7 @@ class on_boardingPage extends StatelessWidget {
                                 .then((value) {
                               go_no_back(
                                 context: context,
-                                widget: Home(),
+                                widget: Home(childIndex: 'login'),
                               );
                             });
                           } else {

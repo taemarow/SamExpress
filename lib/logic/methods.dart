@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-
+/*
 void go_to({required context, required Widget widget}) {
   Navigator.push(
     context,
@@ -8,7 +8,7 @@ void go_to({required context, required Widget widget}) {
       builder: (context) => widget,
     ),
   );
-}
+}*/
 
 void go_no_back({
   context,

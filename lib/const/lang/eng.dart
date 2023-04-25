@@ -4,6 +4,7 @@ import 'lang.dart';
 class ENG extends Lang{
 
   ENG(){
+    appBar_title = 'Sam Express';
     sam_express_rights = 'copyright 2022, samexpress. all rights reserved.';
     login_label = 'Sign In To Your Account';
     login = 'Login';
@@ -24,6 +25,16 @@ class ENG extends Lang{
     boardingPage_2 = 'We Offer The Cheapest Prices That Suit Everyone.';
     boardingPage_3 = 'Guaranteed Transfers For Regular Customers And Merchants';
     boardingPage_4 = 'We Are At Listening To Our Customers At All Times.';
+
+    confirm = 'Confirm';
+    search = 'Search';
+
+    /*******  Register  */
+    register_label = 'Create Your Account';
+    register = 'Register';
+    adress_label = 'enter adress';
+    phone_label = 'enter phone';
+    name_label = 'enter first name and last name';
   }
   
 }

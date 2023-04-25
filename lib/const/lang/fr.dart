@@ -4,6 +4,7 @@ import 'lang.dart';
 class FR extends Lang{
 
   FR(){
+    appBar_title = 'Sam Express';
     sam_express_rights = 'copyright 2022, samexpress. tous les droits sont réservés.';
     login_label = 'Connectez-Vous à Votre Compte';
     login = 'Connexion';
@@ -13,8 +14,9 @@ class FR extends Lang{
     txtfield_validation_text = 'champs requis';
     sendPAss = 'Envoyer le mot de passe';
     enterEmail = 'Ajoutez Votre Email Pour Obtenir Un Nouveau Lien De Mot De Passe';
-    skip = '';
-    wait_activation = '';
+    skip = 'passer';
+    wait_activation = '.....................................................'+
+    '...................................';
     back = 'Retour';
     boardingTitle_1 = 'LIVRAISON LA PLUS RAPIDE';
     boardingTitle_2 = 'TARIFS LES MOINS CHER';
@@ -24,6 +26,16 @@ class FR extends Lang{
     boardingPage_2 = 'Nous Offrons Les Prix Les Moins Chers Qui Conviennent À Tout Le Monde.';
     boardingPage_3 = 'Transferts Garantis Pour Les Clients Réguliers Et Les Commerçants';
     boardingPage_4 = 'Nous Sommes À L\'écoute De Nos Clients À Tout Moment.';
+
+    confirm = 'Confirmer';
+    search = 'Rechercher';
+
+    /*******  Register  */
+    register_label = 'Créer Votre Compte';
+    register = 'S\'inscrir';
+    adress_label = 'entrez l\'adresse';
+    phone_label = 'entrez numéro téléphone';
+    name_label = 'entrez nom et prénom';
   }
   
 }
