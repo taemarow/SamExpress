@@ -14,9 +14,9 @@ class ListColis extends StatelessWidget {
   var searchController = TextEditingController();
 
   List colis = [
-    Colis(adressReceiver: 'constantine', adressSender: 'batna', id: '0124Pm6', phoneReceiver: 054512644, phoneSender: 064578411, poids: 1, prix: 400, receiver: 'houcine', sender: 'aya'),
-    Colis(adressReceiver: 'chlef', adressSender: 'oran', id: '0101260', phoneReceiver: 072512644, phoneSender: 064578411, poids: 1, prix: 450, receiver: 'chamsou', sender: 'zinou'),
-    Colis(adressReceiver: 'alger', adressSender: 'setif', id: '0124698', phoneReceiver: 054512644, phoneSender: 064578411, poids: 1, prix: 300, receiver: 'foufou', sender: 'islam'),
+    Colis(adressReceiver: 'constantine', adressSender: 'batna', id: '0124Pm6', phoneReceiver: '054512644', phoneSender: '064578411', poids: 1, prix: 400, receiver: 'houcine', sender: 'aya'),
+    Colis(adressReceiver: 'chlef', adressSender: 'oran', id: '0101260', phoneReceiver: '072512644', phoneSender: '064578411', poids: 1, prix: 450, receiver: 'chamsou', sender: 'zinou'),
+    Colis(adressReceiver: 'alger', adressSender: 'setif', id: '0124698', phoneReceiver: '054512644', phoneSender: '064578411', poids: 1, prix: 300, receiver: 'foufou', sender: 'islam'),
   ];
 
   @override
@@ -37,7 +37,7 @@ class ListColis extends StatelessWidget {
             shrinkWrap: true,
             itemBuilder: (context, index) => InkWell(
               child: ColiItem(coli: colis[index]),
-              onTap: () => go_no_back(context: context, widget: Home(childIndex: 'ColiInfo')),
+              onTap: () => go_no_back(context: context, widget: ColiInfo(colis: colis[index])),
             ), 
             separatorBuilder: (context, index) => horizon_spacing, 
             itemCount: colis.length

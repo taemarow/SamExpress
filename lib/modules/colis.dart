@@ -1,9 +1,8 @@
 
 class Colis {
-  String id, adressSender, sender, receiver, adressReceiver;
+  String id, adressSender, sender, receiver, adressReceiver, phoneSender, phoneReceiver;
   double prix, poids;
-  int phoneSender, phoneReceiver;
-
+  
   Colis({ 
     required this.id, 
     required this.sender, 

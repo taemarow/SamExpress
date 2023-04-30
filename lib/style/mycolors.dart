@@ -6,6 +6,7 @@ class MyColors {
   static Color bgColor = const Color.fromRGBO (45, 170, 250, 1); //(18, 170, 203, 1);
   static Color red = const Color.fromRGBO(222, 24, 41, 1);
   static Color grey = const Color.fromRGBO(158, 158, 158, 1);
+  static Color lightGrey = const Color.fromARGB(255, 218, 215, 215);
 
 
   static Color darkTheme = const Color.fromARGB(255, 43, 41, 41);

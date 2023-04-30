@@ -32,9 +32,9 @@ class ENG extends Lang{
     /*******  Register  */
     register_label = 'Create Your Account';
     register = 'Register';
-    adress_label = 'enter adress';
-    phone_label = 'enter phone';
-    name_label = 'enter first name and last name';
+    adress_label = 'adress';
+    phone_label = 'phone';
+    name_label = 'full name';
 
     /********** drawer  */
     listColis = 'Parcels list';
@@ -43,6 +43,14 @@ class ENG extends Lang{
     Statics = 'Statics';
     Logout = 'Logout';
     desk = 'desk';
+
+    /********* colis info  ******/
+    colis = 'Parcel';
+    infoSender = 'Sender details';
+    infoReceiver = 'Receiver details';
+    colisInfo = 'Parcel details';
+    prix = 'deleveyr price';
+    poids = 'weight';
   }
   
 }

@@ -22,12 +22,16 @@ Future<void> main() async {
   String l = Cache.get_cache(key: 'lang') ?? null;
   switch(l){
     case 'ENG': lang = ENG();
+      consTtextDirection = TextDirection.ltr;
       break;
     case 'FR': lang = FR();
+      consTtextDirection = TextDirection.ltr;
       break;
     case 'AR': lang = AR();
+      consTtextDirection = TextDirection.rtl;
       break;
     default: lang = AR();
+      consTtextDirection = TextDirection.rtl;
   }
 
 Widget PageActuel;

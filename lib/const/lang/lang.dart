@@ -25,7 +25,6 @@ class Lang {
    String appBar_title = '';
    String confirm = '';
    String search = '';
-   
    String wait_activation = '';
    String back = '';
 
@@ -47,5 +46,13 @@ class Lang {
    String Statics = '';
    String Logout = '';
    String desk = '';
+
+   /********* colis info  ******/
+  String colis = '';
+  String infoSender = '';
+  String infoReceiver = '';
+  String colisInfo = '';
+  String prix = '';
+  String poids = '';
 
 }

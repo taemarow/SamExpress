@@ -35,7 +35,7 @@ class MyDrawer extends StatelessWidget {
             horizon_spacing,
             Container(
               height: 1,
-              color: MyColors.grey,
+              color: MyColors.lightGrey,
               width: double.infinity,
             ),
             horizon_spacing,
@@ -55,7 +55,7 @@ class MyDrawer extends StatelessWidget {
             horizon_spacing,
             Container(
               height: 1,
-              color: MyColors.grey,
+              color: MyColors.lightGrey,
               width: double.infinity,
             ),
 

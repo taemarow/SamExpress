@@ -20,23 +20,27 @@ class appBarCubit extends Cubit<States> {
     emit(change_theme_state());
   }
 
-
-
-String selectedLang = Cache.get_cache(key: 'lang') ?? 'AR';
+  String selectedLang = Cache.get_cache(key: 'lang') ?? 'AR';
   List<DropdownMenuItem<String>> Languages= [
     DropdownMenuItem(value: 'ENG', child: Text('ENG',overflow: TextOverflow.ellipsis, style: TextStyle( fontSize: 16,),)),
     DropdownMenuItem(value: 'FR', child: Text('FR',overflow: TextOverflow.ellipsis, style: TextStyle( fontSize: 16,),)),
     DropdownMenuItem(value: 'AR', child: Text('AR',overflow: TextOverflow.ellipsis, style: TextStyle( fontSize: 16),)),
   ];
+  TextDirection textDirection = consTtextDirection;
+  
   void changeLang(){
     switch(selectedLang){
       case 'ENG': lang = ENG();
+        textDirection = TextDirection.ltr;
         break;
       case 'FR': lang = FR();
+        textDirection = TextDirection.ltr;
         break;
       case 'AR': lang = AR();
+        textDirection = TextDirection.rtl;
         break;
       default: lang = AR();
+        textDirection = TextDirection.rtl;
     }
     emit(change_theme_state());
   }

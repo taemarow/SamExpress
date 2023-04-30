@@ -17,5 +17,5 @@ void go_no_back({
   Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => widget),
-      (Route<dynamic> route) => true);
+      (Route<dynamic> route) => false);
 }

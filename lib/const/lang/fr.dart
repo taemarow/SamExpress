@@ -33,9 +33,9 @@ class FR extends Lang{
     /*******  Register  */
     register_label = 'Créer Votre Compte';
     register = 'S\'inscrir';
-    adress_label = 'entrez l\'adresse';
-    phone_label = 'entrez numéro téléphone';
-    name_label = 'entrez nom et prénom';
+    adress_label = 'l\'adresse';
+    phone_label = 'numéro téléphone';
+    name_label = 'nom et prénom';
 
     /********** drawer  */
     listColis = 'Liste de colis';
@@ -44,6 +44,14 @@ class FR extends Lang{
     Statics = 'Statistiques';
     Logout = 'Déconnecter';
     desk = 'bureau';
+
+    /********* colis info  ******/
+    colis = 'Colis';
+    infoSender = 'Informations sur l\'expéditeur';
+    infoReceiver = 'Informations sur le recepteur';
+    colisInfo = 'Informations sur le colis';
+    prix = 'prix de livraison';
+    poids = 'poids';
   }
   
 }

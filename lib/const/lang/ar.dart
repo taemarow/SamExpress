@@ -32,9 +32,9 @@ class AR extends Lang{
     /*******  Register  */
     register_label = 'إفتح حسابك الآن';
     register = 'فتح حساب';
-    adress_label = 'إدخال العنوان';
-    phone_label = 'إدخال رقم الهاتف';
-    name_label = 'إدخال الإسم و اللقب';
+    adress_label = 'العنوان';
+    phone_label = 'رقم الهاتف';
+    name_label = 'الإسم و اللقب';
 
     /********** drawer  */
     listColis = 'قائمة الطرود';
@@ -43,6 +43,14 @@ class AR extends Lang{
     Statics = 'الإحصائيات';
     Logout = 'تسجيل الخروج';
     desk = 'مكتب';
+
+    /********* colis info  ******/
+    colis = 'الطرد';
+    infoSender = 'معلومات حول المرسل';
+    infoReceiver = 'معلومات حول المرسل إليه';
+    colisInfo = 'معلومات حول الطرد';
+    prix = 'سعر التوصيل';
+    poids = 'الوزن';
   }
   
 }

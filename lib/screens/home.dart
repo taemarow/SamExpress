@@ -7,7 +7,6 @@ import '../logic/cubit/states.dart';
 import '../logic/cubit/appbar_cubit.dart';
 import '../shared/chache.dart';
 import '../style/mycolors.dart';
-import 'colis/coli_info.dart';
 import 'colis/list_colis.dart';
 import 'login.dart';
 import 'my_drawer.dart';
@@ -28,54 +27,55 @@ class Home extends StatelessWidget {
           'register': Register(), 
           'WaitActivation': const WaitActivation(),
           'ListColis' : ListColis(),
-          'ColiInfo' : ColiInfo(),
         };
         cubit = appBarCubit.get(context);
         
-        return Scaffold(
-          
-          floatingActionButton: Visibility(
-            visible: childIndex == 'ListColis'? true : false,
-            child: FloatingActionButton(
-              heroTag: 'add',
-              onPressed: (){},
-              child: Icon(Icons.add, color: MyColors.lightTheme,),
-            ), 
-          ),
-          
-          drawer:   ['login', 'register', 'WaitActivation'].contains(childIndex)? null: MyDrawer() ,
-          appBar: AppBar(
-                title: Text(lang.appBar_title),
-                actions: [
-                  SizedBox(
-                    width: 60,
-                    child: languageList(),
-                  ) ,
-                  
-                  IconButton(
-                    onPressed: () {
-                      cubit.changeTheme();
-                    },
-                    icon: cubit.themeDark
-                        ? const Icon(Icons.sunny, )
-                        : const Icon(Icons.nightlight,),
+        return  Directionality( 
+          textDirection: cubit.textDirection,
+          child: Scaffold(
+              floatingActionButton: Visibility(
+                visible: childIndex == 'ListColis'? true : false,
+                child: FloatingActionButton(
+                  heroTag: 'add',
+                  onPressed: (){},
+                  child: Icon(Icons.add, color: MyColors.lightTheme,),
+                ), 
+              ),
+              
+              drawer:   ['login', 'register', 'WaitActivation'].contains(childIndex)? null: MyDrawer() ,
+              appBar: AppBar(
+                    title: Text(lang.appBar_title),
+                    actions: [
+                      SizedBox(
+                        width: 60,
+                        child: languageList(),
+                      ) ,
+                      
+                      IconButton(
+                        onPressed: () {
+                          cubit.changeTheme();
+                        },
+                        icon: cubit.themeDark
+                            ? const Icon(Icons.sunny, )
+                            : const Icon(Icons.nightlight,),
+                      ),
+                    ],
                   ),
-                ],
+              body: Padding(
+                padding: const EdgeInsets.all(20),
+                child: widgets[childIndex],
               ),
-          body: Padding(
-            padding: const EdgeInsets.all(20),
-            child: widgets[childIndex],
-          ),
-          bottomSheet: Center(
-            heightFactor: 2,
-            child: Text(
-              lang.sam_express_rights,
-              style: TextStyle(
-                fontSize: 12,
-                color: MyColors.grey
+              bottomSheet: Center(
+                heightFactor: 2,
+                child: Text(
+                  lang.sam_express_rights,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: MyColors.grey
+                  ),
+                ),
               ),
-            ),
-          ),
+            )
         );
       }
     );
