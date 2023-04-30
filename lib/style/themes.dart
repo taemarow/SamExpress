@@ -13,6 +13,9 @@ ThemeData darkTheme = ThemeData(
     unselectedItemColor: MyColors.grey,
     showUnselectedLabels: true,
   ),
+  iconTheme: IconThemeData(
+    color: MyColors.bgColor
+  ),
   textTheme: TextTheme(
     headline1: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: MyColors.bgColor),
     headline2: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: MyColors.red),
@@ -38,6 +41,9 @@ ThemeData lightTheme = ThemeData(
     selectedItemColor: MyColors.mainColor,
     unselectedItemColor: MyColors.grey,
     showUnselectedLabels: true,
+  ),
+  iconTheme: IconThemeData(
+    color: MyColors.mainColor
   ),
   textTheme:  TextTheme(
     headline1: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: MyColors.bgColor),

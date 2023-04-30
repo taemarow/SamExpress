@@ -36,6 +36,14 @@ class FR extends Lang{
     adress_label = 'entrez l\'adresse';
     phone_label = 'entrez numéro téléphone';
     name_label = 'entrez nom et prénom';
+
+    /********** drawer  */
+    listColis = 'Liste de colis';
+    listScan = 'Liste de Scannes';
+    listPayment = 'Liste de Paiements';
+    Statics = 'Statistiques';
+    Logout = 'Déconnecter';
+    desk = 'bureau';
   }
   
 }

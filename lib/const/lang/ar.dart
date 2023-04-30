@@ -35,6 +35,14 @@ class AR extends Lang{
     adress_label = 'إدخال العنوان';
     phone_label = 'إدخال رقم الهاتف';
     name_label = 'إدخال الإسم و اللقب';
+
+    /********** drawer  */
+    listColis = 'قائمة الطرود';
+    listScan = 'قائمة المسح';
+    listPayment = 'قائمة الدفع';
+    Statics = 'الإحصائيات';
+    Logout = 'تسجيل الخروج';
+    desk = 'مكتب';
   }
   
 }

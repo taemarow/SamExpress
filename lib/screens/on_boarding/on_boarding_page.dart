@@ -38,10 +38,7 @@ class on_boardingPage extends StatelessWidget {
               actions: [
                 myTextButton(
                   function: () {
-                    go_no_back(
-                      widget: Home(childIndex: 'login'),
-                      context: context,
-                    );
+                    go_no_back( widget: Home(childIndex: 'login'), context: context);
                     Cache.saveBool(key: 'skip_onBoarding', value: true);
                   },
                   text: 'Skip',
@@ -80,15 +77,13 @@ class on_boardingPage extends StatelessWidget {
                       ),
                       const Spacer(),
                       FloatingActionButton(
+                        heroTag: 'onBoarding',
                         onPressed: () {
                           if (cubit.boarding_index ==
                               boarding_list.length - 1) {
                             Cache.saveBool(key: 'skip_onBoarding', value: true)
                                 .then((value) {
-                              go_no_back(
-                                context: context,
-                                widget: Home(childIndex: 'login'),
-                              );
+                              go_no_back( context: context, widget: Home(childIndex: 'login'));
                             });
                           } else {
                             boardController.nextPage(

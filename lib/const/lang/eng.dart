@@ -35,6 +35,14 @@ class ENG extends Lang{
     adress_label = 'enter adress';
     phone_label = 'enter phone';
     name_label = 'enter first name and last name';
+
+    /********** drawer  */
+    listColis = 'Parcels list';
+    listScan = 'Scan list';
+    listPayment = 'Payments list';
+    Statics = 'Statics';
+    Logout = 'Logout';
+    desk = 'desk';
   }
   
 }

@@ -7,9 +7,7 @@ import 'const/lang/eng.dart';
 import 'const/lang/fr.dart';
 import 'logic/cubit/states.dart';
 import 'logic/cubit/appbar_cubit.dart';
-import 'screens/login.dart';
 import 'screens/on_boarding/on_boarding_page.dart';
-import 'screens/wait_activation.dart';
 import 'shared/chache.dart';
 import 'style/themes.dart';
 

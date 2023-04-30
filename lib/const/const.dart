@@ -13,6 +13,8 @@ double phoneHeight(BuildContext context) {
   return MediaQuery.of(context).size.height;
 }
 
+/************* curent page index  **********/
+//String PageIndex = 'ListColis';
 
 /************* spacings  *************/
 var horizon_spacing = const SizedBox(

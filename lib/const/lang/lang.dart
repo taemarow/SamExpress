@@ -40,4 +40,12 @@ class Lang {
    String boardingPage_3 = '';
    String boardingPage_4 = '';
 
+   /********** drawer  */
+   String listColis = '';
+   String listScan = '';
+   String listPayment = '';
+   String Statics = '';
+   String Logout = '';
+   String desk = '';
+
 }

@@ -10,6 +10,7 @@ import '../style/mycolors.dart';
 import 'colis/coli_info.dart';
 import 'colis/list_colis.dart';
 import 'login.dart';
+import 'my_drawer.dart';
 import 'register.dart';
 
 class Home extends StatelessWidget {
@@ -30,20 +31,22 @@ class Home extends StatelessWidget {
           'ColiInfo' : ColiInfo(),
         };
         cubit = appBarCubit.get(context);
+        
         return Scaffold(
-          floatingActionButton:  childIndex == 'ListColis'? 
-            FloatingActionButton(
+          
+          floatingActionButton: Visibility(
+            visible: childIndex == 'ListColis'? true : false,
+            child: FloatingActionButton(
+              heroTag: 'add',
               onPressed: (){},
               child: Icon(Icons.add, color: MyColors.lightTheme,),
-              //backgroundColor: MyColors.mainColor,
-            )
-            : null,
+            ), 
+          ),
+          
+          drawer:   ['login', 'register', 'WaitActivation'].contains(childIndex)? null: MyDrawer() ,
           appBar: AppBar(
-                //elevation: elevation?? 0,
-                //leading: 
                 title: Text(lang.appBar_title),
                 actions: [
-                  
                   SizedBox(
                     width: 60,
                     child: languageList(),
