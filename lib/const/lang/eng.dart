@@ -51,6 +51,9 @@ class ENG extends Lang{
     colisInfo = 'Parcel details';
     prix = 'deleveyr price';
     poids = 'weight';
+
+    /************ new colis ******/
+    newColisTitle = 'create new parcel';
   }
   
 }

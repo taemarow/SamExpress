@@ -52,6 +52,9 @@ class FR extends Lang{
     colisInfo = 'Informations sur le colis';
     prix = 'prix de livraison';
     poids = 'poids';
+
+    /*********** new colis  *******/
+    newColisTitle = 'Créer un nouveau colis';
   }
   
 }

@@ -2,7 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sam_express/const/const.dart';
+import 'package:sam_express/screens/colis/newColis.dart';
 import 'package:sam_express/screens/wait_activation.dart';
+import 'package:sam_express/shared/componenets.dart';
 import '../logic/cubit/states.dart';
 import '../logic/cubit/appbar_cubit.dart';
 import '../shared/chache.dart';
@@ -37,7 +39,13 @@ class Home extends StatelessWidget {
                 visible: childIndex == 'ListColis'? true : false,
                 child: FloatingActionButton(
                   heroTag: 'add',
-                  onPressed: (){},
+                  onPressed: (){
+                    myNotification(
+                      context: context, 
+                      content: NewColis(),
+                      title: lang.newColisTitle,
+                    );
+                  },
                   child: Icon(Icons.add, color: MyColors.lightTheme,),
                 ), 
               ),

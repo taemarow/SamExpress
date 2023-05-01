@@ -55,4 +55,7 @@ class Lang {
   String prix = '';
   String poids = '';
 
+  /*********** new colis  ******/
+  String newColisTitle = '';
+
 }

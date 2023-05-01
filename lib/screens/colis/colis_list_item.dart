@@ -6,6 +6,8 @@ import 'package:sam_express/modules/colis.dart';
 import 'package:sam_express/shared/componenets.dart';
 import 'package:sam_express/style/mycolors.dart';
 
+import '../../logic/methods.dart';
+
 class ColiItem extends StatelessWidget {
   ColiItem({super.key, required this.coli});
   Colis coli ;
@@ -43,7 +45,11 @@ class ColiItem extends StatelessWidget {
           ),
           horizon_spacing,
           IconTextButton(
-            function: (){}, 
+            function: (){
+              QRScanner().then((value){
+                toast(msg: value.toString());
+              });
+            }, 
             text: lang.confirm, 
             icon: Icons.check
           ),

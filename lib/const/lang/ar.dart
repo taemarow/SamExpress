@@ -51,6 +51,9 @@ class AR extends Lang{
     colisInfo = 'معلومات حول الطرد';
     prix = 'سعر التوصيل';
     poids = 'الوزن';
+
+    /************* new colis ********/
+    newColisTitle = 'إنشاء طرد جديد';
   }
   
 }

@@ -1,5 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sam_express">
+    <uses-permission android:name="android.permission.CAMERA" />
+
    <application
         android:label="sam_express"
         android:name="${applicationName}"

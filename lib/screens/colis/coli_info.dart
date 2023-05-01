@@ -5,6 +5,7 @@ import 'package:sam_express/screens/my_drawer.dart';
 import '../../const/const.dart';
 import '../../logic/cubit/appbar_cubit.dart';
 import '../../logic/cubit/states.dart';
+import '../../logic/methods.dart';
 import '../../modules/colis.dart';
 import '../../shared/chache.dart';
 import '../../shared/componenets.dart';
@@ -178,7 +179,11 @@ class ColiInfo extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconTextButton(
-                        function: (){}, 
+                        function: (){
+                          QRScanner().then((value){
+                            toast(msg: value.toString());
+                          });
+                        }, 
                         text: lang.confirm, 
                         icon: Icons.check
                       ),

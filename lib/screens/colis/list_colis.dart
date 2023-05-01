@@ -5,7 +5,6 @@ import 'package:sam_express/logic/methods.dart';
 import 'package:sam_express/modules/colis.dart';
 import 'package:sam_express/screens/colis/coli_info.dart';
 import 'package:sam_express/screens/colis/colis_list_item.dart';
-import 'package:sam_express/screens/home.dart';
 import 'package:sam_express/shared/componenets.dart';
 
 class ListColis extends StatelessWidget {
