@@ -10,6 +10,7 @@ import '../../modules/colis.dart';
 import '../../shared/chache.dart';
 import '../../shared/componenets.dart';
 import '../../style/mycolors.dart';
+import '../home.dart';
 
 class ColiInfo extends StatelessWidget {
   ColiInfo({
@@ -187,6 +188,11 @@ class ColiInfo extends StatelessWidget {
                         text: lang.confirm, 
                         icon: Icons.check
                       ),
+                      myTextButton(
+                        function: (){
+                          go_no_back(context: context, widget: Home(childIndex: 'ListColis',));
+                        }, 
+                        text: 'back')
                     ],
                   )
                   
